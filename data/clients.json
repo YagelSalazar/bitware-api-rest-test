@@ -22,5 +22,17 @@
     "Correo_Electronico": "jperez@hotmail.com",
     "Contrasena": "juanitoperez",
     "id": 2
+  },
+  "3": {
+    "Nombre": "Hernesto",
+    "Apellidos": "Jimenez Reyes",
+    "Nombre_Usuario": "Herbo",
+    "Correo_Electronico": "hernestito@hotmail.com",
+    "Contrasena": "contrasenita"
+  },
+  "5": {
+    "Nombre_Usuario": "Oc",
+    "Contrasena": "cochinitos",
+    "Nombre": "Santiago"
   }
 }
