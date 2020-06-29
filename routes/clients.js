@@ -33,9 +33,7 @@ const userRoutes = (app, fs) => {
     app.get('/NutriNET/Cliente/:id', async (req, res) => {
         await readFile(data => {
             const userId = req.params["id"];
-            writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send(data[userId]);
-            });
+            res.status(200).send(data[userId]);
         },
             true);
     });
@@ -48,7 +46,7 @@ const userRoutes = (app, fs) => {
             // add the new client
             data[newUserId.toString()] = req.body;
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send({CVE_MENSAJE: "Se ha agregado el cliente",  client: req.body });
+                res.status(200).send({ CVE_MENSAJE: "Se ha agregado el cliente", client: req.body });
             });
         },
             true);
@@ -62,7 +60,7 @@ const userRoutes = (app, fs) => {
             const userId = req.params["id"];
             data[userId] = req.body;
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send({CVE_MENSAJE: `Client id:${userId} updated`,  client: req.body });
+                res.status(200).send({ CVE_MENSAJE: `Client id:${userId} updated`, client: req.body });
             });
         },
             true);
@@ -75,7 +73,7 @@ const userRoutes = (app, fs) => {
             const userId = req.params["id"];
             delete data[userId];
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send({CVE_MENSAJE: `Client id:${userId} removed`,  client: req.body });
+                res.status(200).send({ CVE_MENSAJE: `Client id:${userId} removed`, client: req.body });
             });
         },
             true);
